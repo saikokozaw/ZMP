@@ -1,0 +1,123 @@
+body {
+    background-image: linear-gradient(to right bottom, #f4f0f6, #fceaf3, #ffe3e5, #ffe0d0, #ffe1bc, #f3e4b3, #e1e9b0, #caedb3, #adedc4, #96ead7, #8ae5e8, #8ddef4);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.icon {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top:15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.icon h2{
+    display: none;
+    margin: 0 15px;
+    position: relative; 
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    background: #333;
+    border-radius: 50%;
+    font-size: 30px;
+    color: rgb(3, 135, 158);
+    transition: .5s;
+}
+
+.icon h2::before{
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.icon h2:hover::before{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffee10;
+}
+.icon h2:hover{
+    color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+.icon h3 {
+    margin-top: 5%;
+    color: rgb(3, 135, 158);
+    transition: .5s;
+}
+
+.icon h3:hover {
+    transform: scale(1.1);
+    color: #db8402;
+}
+
+.playlistContainer {
+    margin-bottom: 30px;
+}
+
+.trackItem {
+    color: rgb(3, 135, 158);
+    font-size: 20px;
+    border-bottom: 1px solid #6c7575;
+    padding: 10px 0px;
+    cursor: pointer;
+    user-select: none;
+    transition: 1s;
+}
+
+.trackItem:hover {
+    color: #ffc107;
+}
+
+.currentAndTotalTime {
+    color: #037428;
+}
+
+.musicPlayer {
+    display: flex;
+    flex-direction: row;
+}
+
+#progressBar {
+    width: 350px;
+    height: 5px;
+    background-color: rgb(28, 68, 75);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#currentProgress {
+    width: 0px;
+    height: 100%;
+    background-color: #ff0707;
+}
+
+.controls {
+    font-size: 30px;
+    color: #ffc107;
+    margin: 20px 40px;
+    cursor: pointer;
+}
+
+.pauseButton {
+    display: none;
+}
